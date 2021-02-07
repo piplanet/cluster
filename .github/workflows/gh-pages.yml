@@ -33,6 +33,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - run: sudo npm install -D postcss
       - run: npm ci
       - run: hugo --minify
 
